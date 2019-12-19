@@ -18,6 +18,7 @@ public class LinkedList {
         Node(int d) 
         { 
             //Write your code here 
+          this.data = d;
         } 
     } 
   
@@ -25,6 +26,7 @@ public class LinkedList {
     public static LinkedList insert(LinkedList list, int data) 
     { 
         // Create a new node with given data 
+      
    
         // If the Linked List is empty, 
         // then make the new node as head 
@@ -34,7 +36,13 @@ public class LinkedList {
 
             // Insert the new_node at last node 
         // Return the list by head 
+      if(!list.peekFirst())
+        list.addFirst(data);
+      else
+        list.add(data);
         
+      
+      
     } 
   
     // Method to print the LinkedList. 
